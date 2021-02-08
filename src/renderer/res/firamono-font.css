@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Fira Mono";
+    font-weight: 700;
+    src: url("FiraMono-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Fira Mono";
+    font-weight: 500;
+    src: url("FiraMono-Regular.ttf") format("truetype");
+}

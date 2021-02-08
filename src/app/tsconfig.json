@@ -1,0 +1,7 @@
+{
+    "files": ["main.ts", "MessyDeskApp.ts"],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "es5"
+    }
+}

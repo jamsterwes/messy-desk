@@ -1,0 +1,13 @@
+$col-bg: #2a2a2c;
+$col-logo-text: #2e74ff;
+$col-navbar-bg: #0a1f58;
+
+body {
+    background-color: $col-bg;
+}
+
+.title-text {
+    background-color: $col-navbar-bg;
+    color: $col-logo-text;
+    font-family: "Fira Mono", "Consolas", monospace;
+}
