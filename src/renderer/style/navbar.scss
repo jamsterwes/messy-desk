@@ -1,0 +1,54 @@
+// TODO: put colors into one scss
+
+#navbar {
+    background-color: #0a1f58;
+    border-bottom: 1px solid #183d86;
+}
+
+.logo-text, .nav-item {
+    /* if this changes, 
+        update in the #content->height: calc(); expr in structure.css */
+    font-size: 14pt;
+    font-family: "Fira Mono", "Consolas", monospace;
+}
+
+.nav-item {
+    color: #e0e0e0;
+    display: inline-block;
+    /* Keep navbar at proper padded height,
+       But also allows whole height to be highlighted */
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1.0em;
+    padding-right: 1.0em;
+    /* Center nav-item text */
+    text-align: center;
+    // If hover
+    &:hover {
+        background-color: #0f2d80;
+        color: #efefef;
+        cursor: pointer;
+        user-select: none;
+    }
+    // If selected
+    &.selected {
+        background-color: #0d276e;
+        color: #ffffff;
+        // Selected:hover
+        &:hover {
+            background-color: #12338d;
+        }
+    }
+}
+
+.logo-text {
+    color: #2e74ff;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    /* Don't want the logo to have hover color/cursor */
+    &:hover {
+        background-color: inherit;
+        color: #2e74ff;
+        cursor: inherit;
+    }
+}

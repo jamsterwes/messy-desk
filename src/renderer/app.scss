@@ -1,2 +1,7 @@
 @import "res/firamono-font.css";
+@import "style/navbar.scss";
 @import "style/theme.scss";
+
+.invisible {
+    display: none;
+}

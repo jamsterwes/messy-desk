@@ -1,11 +1,44 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-class App extends React.Component {
+// Import components
+import Navbar from "./components/Navbar";
+import NavbarItem from "./components/NavbarItem";
+// Import views
+import NotesView from "./views/NotesView";
+import SlidesView from "./views/SlidesView";
+
+
+type AppState = {
+    selectedTab: string
+}
+
+export class App extends React.Component<{}, AppState> {
+    state = {
+        selectedTab: "notes"
+    }
+
+    isTabSelected(name: string) {
+        return this.state.selectedTab === name;
+    }
+
+    selectTab(name: string) {
+        this.setState({
+            ...this.state,
+            selectedTab: name
+        });
+    }
+
+    // TODO: refactor slide selection
     render() {
-        return (
-            <div className="title-text">Welcome to messy-desk v0.0.1</div>
-        );
+        return (<div>
+            <Navbar app={this} tabs={["notes", "slides", "settings"]} />
+            <div id="content">
+                {/* TODO: sidebar */}
+                <NotesView isSelected={this.state.selectedTab === "notes"} />
+                <SlidesView isSelected={this.state.selectedTab === "slides"} />
+            </div>
+        </div>);
     }
 }
 
