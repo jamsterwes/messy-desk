@@ -26,7 +26,7 @@ export default class Navbar extends React.Component<NavbarProps> {
         return (<div id="navbar">
             <NavbarItem isLogo={true} label="<messy-desk>" />
             {this.props.tabs.map(tabName => (
-                <NavbarItem isSelected={this.isTabSelected(tabName)} onClick={(e) => this.selectTab(tabName)} label={tabName} />
+                <NavbarItem key={tabName} isSelected={this.isTabSelected(tabName)} onClick={(e) => this.selectTab(tabName)} label={tabName} />
             ))}
         </div>)
     }

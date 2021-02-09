@@ -23,4 +23,8 @@ export default class MessyDeskApp {
             this.win.show();
         });
     }
+
+    sendMessage(channel: string, ...args: any[]) {
+        this.win.webContents.send(channel, ...args);
+    }
 }

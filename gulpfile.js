@@ -43,7 +43,9 @@ function tsc_app(cb) {
 function renderify(cb) {
     let bundler = browserify({
         basedir: "src/renderer",
-        entries: "App.tsx"
+        entries: "App.tsx",
+        insertGlobalVars: 'global',
+        ignoreMissing: true
     });
     bundler.plugin("tsify")
            .bundle()
